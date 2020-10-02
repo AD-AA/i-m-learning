@@ -1,0 +1,26 @@
+const dnaToRna = (dna) => {
+  let rna = '';
+  for (let i = 0; i < dna.length; i += 1) {
+    let code = '';
+    if (dna[i] == 'A') {
+      code = 'U';
+    }
+    if (dna[i] == 'T') {
+      code = 'A';
+    }
+    if (dna[i] == 'C') {
+      code = 'G';
+    }
+    if (dna[i] == 'G') {
+      code = 'C';
+    }
+    if (dna[i] == '') {
+      code = '';
+    }
+    if (dna[i] !== ('A' || 'T' || 'C' || 'G' || '')) {
+      rna = null;
+    }
+    rna += code;
+  }
+  return rna;
+};
